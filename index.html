@@ -111,6 +111,44 @@ margin:60px auto
 
 a{color:#1a73e8;text-decoration:none}
 a:hover{text-decoration:underline}
+
+  .shortcuts{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin:18px auto 30px;
+}
+
+.shortcut{
+  width:78px;
+  text-align:center;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.shortcut img{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  padding:10px;
+  background:#f1f3f4;
+  transition:.25s;
+}
+
+.dark .shortcut img{
+  background:#1e1e1e;
+}
+
+.shortcut:hover img{
+  transform:scale(1.1);
+  box-shadow:0 0 12px rgba(26,115,232,.6);
+}
+
+.shortcut span{
+  display:block;
+  margin-top:6px;
+}
 </style>
 </head>
 
@@ -304,6 +342,36 @@ box.innerHTML=`<div class="card">Error loading results</div>`;
 }
 }
 
+  <div class="shortcuts">
+
+  <a class="shortcut" href="https://www.instagram.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+    <span>Instagram</span>
+  </a>
+
+  <a class="shortcut" href="https://www.youtube.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+    <span>YouTube</span>
+  </a>
+
+  <a class="shortcut" href="https://open.spotify.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png">
+    <span>Spotify</span>
+  </a>
+
+  <a class="shortcut" href="https://www.google.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png">
+    <span>Google</span>
+  </a>
+
+  <a class="shortcut" href="https://duckduckgo.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504925.png">
+    <span>DuckDuckGo</span>
+  </a>
+
+</div>
+
+
 // ---------- DEFAULT HOME (SIMPLE & WORKING) ----------
 function loadHome(){
 const box = document.getElementById("results");
@@ -343,5 +411,6 @@ loadHome();
 
 </body>
 </html>
+
 
 
